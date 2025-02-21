@@ -1,2 +1,0 @@
-class camera:
-    print('camera');
