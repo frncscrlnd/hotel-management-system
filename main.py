@@ -1,23 +1,21 @@
-def menu():
-    print('--- Sistema di gestione ---');
-    print('1. Registrare una nuova prenotazione');
-    print('2. Visualizzare elenco prenotazioni attive');
-    print('3. Annullare prenotazione');
-    print('4. Calcolare numero di notti');
-    print('5. Esci');
+def gestionale(ordini):
+    valore = int(input("--- Sistema di gestione hotel ---\n"
+                   "1. registra una nuova prenotazione;\n"
+                   "2. visualizza elenco prenotazioni attive;\n"
+                   "3. annulla prenotazione;\n"
+                   "4. calcola il numero di notti;\n"
+                   "0. Esci.\n"))
+    while valore != 0:
+        match valore:
+            case 1:
 
-while True:
-    menu();
-    choise = int(input('Selezionare una scelta: '));
+                break;
+            case 2:
 
-    if choise == 1:
-        print('Registrazioe prenotazione');
-    elif choise == 2:
-        print('Visualizazzione elenco prenotazione');
-    elif choise == 3:
-        print('Annullamento prenotazione');
-    elif choise == 4:
-        print('Calcolare numero notti');
-    elif choise == 5:
-        print('grazie per aver utilizzato il nostro sistema, arrivederci!');
-        break;
+                break;
+            case 3:
+
+                break;
+            case 4:
+
+                break;
