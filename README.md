@@ -16,12 +16,15 @@ I punti da sviluppare sono:
 - Calcolare il numero totale di notti prenotate per un cliente.
 
 ## Suddivisione dei compiti
-### Francesco
+### Francesco Orlandi
 - Import
 - Scrittura delle classi hotel, cliente e prenotazioni
 - Creazione del metodo per calcolare le notti di una prenotazione
-### Fabio
-### Mattia
+
+### Fabio Masciarelli
+- Scrittura della classe HotelManager che permette una gestione dei clienti, consentendo di aggiungere clienti o visualizzare quelli già registrati.
+
+### Mattia Paventi
 ### Francesca Aquilani 
 - Scrittura del metodo per calcolare il numero totale di notti di una prenotazione specifica.
 
