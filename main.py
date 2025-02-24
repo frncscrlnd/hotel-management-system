@@ -114,3 +114,36 @@ class HotelManager:
             print(f"Reservation ID {reservation_id} deleted successfully!")
         else:
             print("Reservation not found.")
+    
+    @classmethod
+    def total_nights(cls, reservation_id: str) -> Union[int, str]:
+        if not (reservation := cls.find_reservation_by_rid(reservation_id)) or isinstance(reservation, str):
+            return "Reservation not found"
+        return reservation.total_nights()
+ 
+    def main() -> None:
+        options = {
+            "1": ("Add a customer", HotelManager.add_customer),
+            "2": ("Display customers", HotelManager.display_customers),
+            "3": ("Find a customer", lambda: print(HotelManager.find_customer(HotelManager._get_input("Enter the ID: ")))),
+            "4": ("Add a reservation", HotelManager.add_reservation),
+            "5": ("Display reservations", HotelManager.display_reservations),
+            "6": ("Find reservations by customer ID",
+                lambda: HotelManager._print_list(HotelManager.find_reservation_by_cid(HotelManager._get_input("Enter the customer's ID: ")),
+                                              "No reservations found for this customer.")),
+            "7": ("Delete a reservation", lambda: HotelManager.delete_reservation(HotelManager._get_input("Enter the reservation ID: "))),
+            "8": ("Total nights", lambda: print(f"Total nights: {HotelManager.total_nights(HotelManager._get_input('Enter the reservation ID: '))}")),
+            "9": ("Find a reservation by ID", lambda: print(HotelManager.find_reservation_by_rid(HotelManager._get_input("Enter the reservation ID: ")))),
+            "10": ("Exit", lambda: None)
+        }
+ 
+    while True:
+        print("\nHotel Management System:")
+        print("\n".join(f"  {k}. {v[0]}" for k, v in options.items()))
+        if (choice := HotelManager._get_input("Enter your choice: ")) == "10":
+            print("Exiting...")
+            break
+        options.get(choice, (None, lambda: print("Invalid choice.")))[1]()
+ 
+    if _name_ == "_main_":
+        main()
