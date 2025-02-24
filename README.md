@@ -16,12 +16,11 @@ I punti da sviluppare sono:
 - Calcolare il numero totale di notti prenotate per un cliente.
 
 ## Suddivisione dei compiti
+### Francesco
+### Fabio
+### Mattia
 ### Francesca Aquilani 
 - Scrittura del metodo per calcolare il numero totale di notti di una prenotazione specifica.
 
 - Scrittura del menù interattivo per l'utente
   - permette di gestire clienti e prenotazioni di un sistema alberghiero
-
-### Mattia
-### Francesco
-### Fabio
