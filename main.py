@@ -30,3 +30,44 @@ class HotelReservation:
  
     def total_nights(self) -> int:
         return (self.check_out - self.check_in).days
+    
+
+class HotelManager:
+    hotel = Hotel()
+    _current_year = datetime.now().year  # Cached at class level for all methods
+
+    @classmethod
+    def _get_input(cls, prompt: str) -> str:
+        """Centralized input validation."""
+        while not (value := input(prompt).strip()):
+            print("Input cannot be empty.")
+        return value
+
+    @classmethod
+    def _parse_date(cls, date_str: str) -> datetime:
+        try:
+            return datetime.strptime(f"{date_str}/{cls._current_year}", "%d/%m/%Y")
+        except ValueError:
+            raise ValueError("Invalid date format. Use DD/MM.")
+
+    @classmethod
+    def _print_list(cls, items: list, empty_msg: str) -> None:
+        """Reusable list printing."""
+        print(empty_msg) if not items else [print(f"  {item}") for item in items]
+
+    @classmethod
+    def add_customer(cls) -> None:
+        id = cls._get_input("Enter the ID: ")
+        if id in cls.hotel.customers:
+            print(f"Customer ID {id} already exists!")
+            return
+        cls.hotel.customers[id] = Customer(id, cls._get_input("Enter the name: "), cls._get_input("Enter the surname: "))
+        print(f"Customer ID {id} added successfully!")
+
+    @classmethod
+    def display_customers(cls) -> None:
+        cls._print_list(list(cls.hotel.customers.values()), "No customers found.")
+
+    @classmethod
+    def find_customer(cls, id: str) -> Union[Customer, str]:
+        return cls.hotel.customers.get(id, "Customer not found")
