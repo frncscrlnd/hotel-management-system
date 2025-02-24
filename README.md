@@ -17,6 +17,9 @@ I punti da sviluppare sono:
 
 ## Suddivisione dei compiti
 ### Francesco
+- Import
+- Scrittura delle classi hotel, cliente e prenotazioni
+- Creazione del metodo per calcolare le notti di una prenotazione
 ### Fabio
 ### Mattia
 ### Francesca Aquilani 
