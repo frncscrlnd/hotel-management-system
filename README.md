@@ -25,11 +25,11 @@ I punti da sviluppare sono:
 - Scrittura della classe HotelManager che permette una gestione dei clienti, consentendo di aggiungere clienti o visualizzare quelli già registrati.
 
 ### Mattia Paventi
--Creazione del metodo per aggiungere una prenotazione con precedente aggiunta del cliente;
--Creazione dei metodi per cercare tra le prenotazioni sia con ID cliente che ID prenotazione;
--Creazione dei metodi per controllare che l'ID sia univoco e che il formato della data sia corretto;
--Creazione del metodo per mostrare tutte le prenotazioni;
--Creazione del metodo per eliminare una prenotazione -attraverso ID;
+- Creazione del metodo per aggiungere una prenotazione con precedente aggiunta del cliente;
+- Creazione dei metodi per cercare tra le prenotazioni sia con ID cliente che ID prenotazione;
+- Creazione dei metodi per controllare che l'ID sia univoco e che il formato della data sia corretto;
+- Creazione del metodo per mostrare tutte le prenotazioni;
+- Creazione del metodo per eliminare una prenotazione -attraverso ID;
 ### Francesca Aquilani 
 - Scrittura del metodo per calcolare il numero totale di notti di una prenotazione specifica.
 
