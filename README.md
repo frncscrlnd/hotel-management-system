@@ -35,3 +35,40 @@ I punti da sviluppare sono:
 
 - Scrittura del menù interattivo per l'utente
   - permette di gestire clienti e prenotazioni di un sistema alberghiero
+
+# Hotel Booking Management System 
+## Group 1
+
+### Project Overview
+
+Develop a program to manage hotel reservations.  
+The key points to develop are:
+- Register new bookings by associating:
+  - the customer's name;
+  - the room number;
+  - check-in dates;
+  - check-out dates.
+- Display the list of active reservations.
+- Cancel a specific reservation.
+- Calculate the total number of nights booked for a customer.
+
+## Task Division
+### Francesco Orlandi
+- Imports
+- Writing the classes: Hotel, Customer, and Reservation
+- Creating the method to calculate nights for a reservation
+
+### Fabio Masciarelli
+- Writing the `HotelManager` class for customer management, allowing the addition of new customers and viewing of registered ones.
+
+### Mattia Paventi
+- Creating the method to add a reservation with prior customer addition;
+- Creating methods to search reservations by both customer ID and reservation ID;
+- Creating methods to ensure ID uniqueness and correct date format;
+- Creating the method to display all reservations;
+- Creating the method to delete a reservation by ID.
+
+### Francesca Aquilani 
+- Writing the method to calculate the total number of nights for a specific reservation.
+- Writing the interactive menu for the user
+  - Allows management of customers and reservations in a hotel system.
